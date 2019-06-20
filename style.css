@@ -1,0 +1,31 @@
+*{box-sizing: border-box;}
+*{margin:0; padding:0}
+ul,li{list-style: none;}
+.window{
+  width:720px;
+  height:405px;
+  overflow: hidden;
+  margin:auto;
+}
+.images{
+  display: flex;
+  transition:all 1s;
+}
+.images > img{
+  width:100%;
+}
+.menuBar > ul{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuBar > a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
