@@ -9,7 +9,7 @@ ul, li {list-style: none;}
 
 .images {
   display: flex;
-  transition: all 1s;
+  transition: all 1.5s;
   align-items: center;
   z-index: 0;
 }
@@ -19,6 +19,10 @@ ul, li {list-style: none;}
   max-height: 100%;
 }
 
+.menuBar{
+  display: flex;
+  justify-content: center;
+}
 .menuBar>ul {
   display: flex;
   justify-content: center;
@@ -40,6 +44,7 @@ ul, li {list-style: none;}
   cursor: pointer;
   position: relative;
 }
+
 .menuBar>ul>li>a:hover{
   background-color: #F9F9F9;
   transition:all 0.3s;
@@ -52,10 +57,10 @@ ul, li {list-style: none;}
 .menuBar>ul>li.active>a::before{
   content:'';
   position: absolute;
-  top:-2%;
+  top:-3%;
   right:50%;
   transform: translate(50%,0);
-  border:8px solid transparent;
+  border:9px solid transparent;
   border-top-color: #FEFEFE;
   box-shadow: inset 0px 5px 3px -4px rgba(224, 224, 224, 1);
   z-index: 1;
