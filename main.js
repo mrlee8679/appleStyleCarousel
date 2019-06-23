@@ -11,7 +11,7 @@ $lis.eq(0).addClass('active')
 let timer = setInterval(function () {
   addActive(current)
   goToSlide(current + 1)
-}, 3000)
+}, 2000)
 
 $('.container').on('mouseenter', function () {
   window.clearInterval(timer)
@@ -19,7 +19,7 @@ $('.container').on('mouseenter', function () {
   timer = setInterval(function () {
     addActive(current)
     goToSlide(current + 1)
-  }, 3000)
+  }, 2000)
 })
 
 document.addEventListener('visibilitychange', function (e) {
@@ -29,7 +29,7 @@ document.addEventListener('visibilitychange', function (e) {
     timer = setInterval(function () {
       addActive(current)
       goToSlide(current + 1)
-    }, 3000)
+    }, 2000)
   }
 })
 
@@ -43,7 +43,7 @@ function makeFakeSlides() {
 }
 
 function addActive() {
-  if (current + 1 > 3) {
+  if (current + 1 > $lis.length-1) {
     $lis.removeClass('active')
     $lis.eq(0).addClass('active')
   } else {
