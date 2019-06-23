@@ -78,11 +78,8 @@ function goToSlide (index){
   }else if (index<0){
     index.$lis.length-1
   }
-  console.log(index)
   if (current === $lis.length-1 && index === 0){
-    
     $slides.css({transform:`translateX(${-($lis.length+1) * 920}px)`})
-    
       .one('transitionend',function(){
         $slides.hide().offset()
         $slides.css({transform:`translateX(${-(index+1) * 920}px)`}).show()
@@ -97,4 +94,6 @@ function goToSlide (index){
     $slides.css({transform:`translateX(${-(index+1) * 920}px)`})
   }
   current = index
+  $lis.removeClass('active')
+  $lis.eq(current).addClass('active')
 }
