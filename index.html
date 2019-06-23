@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable-no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0">
+  <title>AppleStyle</title>
   <link rel="stylesheet" href="./style.css">
-  <script src="//at.alicdn.com/t/font_1253696_uctuv113g6p.js"></script>
-  <title>Document</title>
+  <link rel="stylesheet" href="./loading.css">
+  <script src="//at.alicdn.com/t/font_1253696_je8v6tl6hz.js"></script>
+  <style type="text/css">
+    .icon {
+      width: 1rem; height: 1rem;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="window">
-    <div id="slides" class="images">
-      <img src="https://www.htxt.co.za/wp-content/uploads/2018/10/intel-core-i9-9th-gen-header.jpg" alt="9900k" style="width:720px;">
-      <img src="http://game2gether.de/wp-content/uploads/2015/12/Nvidia-RTX-2080-Ti-Logo.png" alt="2080ti" style="width:720px;">
-      <img src="https://cdn.mos.cms.futurecdn.net/LYzCPeoPBopsaTVwYgDqdX.jpg" alt="ram" style="width:720px;">
-      <img src="https://s2.ax1x.com/2019/06/20/VxKYr9.jpg" alt="motherboard" style="width:720px;">
+  <div class="main">
+    <div class="container">
+      <div id="slidesWrapper" class="window">
+        <div id="slides" class="images">
+          <img src="https://www.htxt.co.za/wp-content/uploads/2018/10/intel-core-i9-9th-gen-header.jpg" alt="9900k">
+          <img src="http://game2gether.de/wp-content/uploads/2015/12/Nvidia-RTX-2080-Ti-Logo.png" alt="2080ti">
+          <img src="https://cdn.mos.cms.futurecdn.net/LYzCPeoPBopsaTVwYgDqdX.jpg" alt="ram">
+          <img src="https://s2.ax1x.com/2019/06/20/VxKYr9.jpg" alt="motherboard">
+        </div>
+      </div>
+      <div id="menuBar" class="menuBar">
+        <ul>
+          <div class="bar">
+            <img src="./img/divider.png" style="width:2px; height:54px; vertical-align: top;">
+          </div>
+          <li>
+            <a class="1">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-cpu"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="2">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-graphics-card"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="3">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-Ram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="4">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-zhuban"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="menuBar">
-    <ul>
-      <li>
-        <a>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-cpu"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-graphics-card"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-Ram"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a>
-          <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-zhuban"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </div>
+
   <script src="./jquery-3.4.1.min.js"></script>
   <script src="./main.js"></script>
 </body>
+
 </html>
