@@ -9,7 +9,7 @@ ul, li {list-style: none;}
 
 .images {
   display: flex;
-  transition: all 1.5s;
+  transition: all 0.8s;
   align-items: center;
   z-index: 0;
 }

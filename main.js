@@ -3,6 +3,7 @@ let $slides = $('#slides')
 let $images = $slides.children('img')
 let current = 0
 
+
 makeFakeSlides()
 bindEvents()
 $slides.css({ transform: 'translateX(-920px)' })
@@ -11,7 +12,7 @@ $lis.eq(0).addClass('active')
 let timer = setInterval(function () {
   addActive(current)
   goToSlide(current + 1)
-}, 2000)
+}, 4000)
 
 $('.container').on('mouseenter', function () {
   window.clearInterval(timer)
@@ -19,7 +20,7 @@ $('.container').on('mouseenter', function () {
   timer = setInterval(function () {
     addActive(current)
     goToSlide(current + 1)
-  }, 2000)
+  }, 4000)
 })
 
 document.addEventListener('visibilitychange', function (e) {
@@ -29,7 +30,7 @@ document.addEventListener('visibilitychange', function (e) {
     timer = setInterval(function () {
       addActive(current)
       goToSlide(current + 1)
-    }, 2000)
+    }, 4000)
   }
 })
 
@@ -59,6 +60,21 @@ function bindEvents() {
     $lis.removeClass('active')
     $lis.eq(index).addClass('active')
     goToSlide(index)
+  })
+  $('ul').on('touchstart','li',function(s){
+    let $li = $(s.currentTarget)
+    let index = $li.index()
+    $lis.removeClass('active')
+    $lis.eq(index).addClass('active')
+    window.clearInterval(timer)
+    goToSlide(index)
+  }).on('touchend',function(){
+    console.log('hi')
+    timer = setInterval(function () {
+      addActive(current)
+      goToSlide(current + 1)
+      console.log('hh')
+    }, 4000)
   })
 }
 
